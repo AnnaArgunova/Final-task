@@ -1,0 +1,43 @@
+.menu__top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    border-top: 2px solid transparent;
+      -moz-border-image: -moz-linear-gradient(to right,
+      white 0%,
+      rgb(229, 229, 229) 20%,
+      rgb(229, 229, 229) 80%,
+        white 100%);
+      border-image: linear-gradient(to right,
+      white 0%,
+      rgb(229, 229, 229) 20%,
+      rgb(229, 229, 229) 80%,
+        white 100%);
+  
+        border-image-slice: 1;
+}
+
+
+.item,
+.item:focus{
+    border: none;
+     
+}
+
+.menu__top>li{
+    border-right: 2px solid rgb(229, 229, 229);
+    height: 100%;
+    padding: 1%;
+}
+
+.catalog__text{
+  text-align: center;
+  padding: 10vh 0;
+  line-height: 2.5rem;
+}
+
+.text_color{
+ color: rgb(243, 102, 113);
+}
