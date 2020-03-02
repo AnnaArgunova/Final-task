@@ -94,8 +94,8 @@ window.catalog = [{
     fashion: 'Classical style',
     colors: ['Black', 'Blue'],
     sizes: ['UK 52', 'UK 54', 'UK 56'],
-    thumbnail: 'thumbnail path', // replace with image extracted from item layout
-    preview: ['full image path 1', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
+    thumbnail: '../img/photo14.png', // replace with image extracted from item layout
+    preview: ['../img/photoMin.jpg', '../img/photoMin2.jpg', '../img/photoMin3.jpg'] // replace with paths to images extracted from item layout
 }, {
     id: '8b300772-eee3-4ff1-b091-e89f17e0e469',
     dateAdded: '2017-08-10T14:59:00.000Z',
@@ -195,3 +195,5 @@ window.catalog = [{
     thumbnail: '../img/photo13.png', // replace with image extracted from item layout
     preview: ['full image path 1', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
 }];
+
+export default catalog;

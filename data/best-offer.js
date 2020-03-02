@@ -10,3 +10,5 @@ window.bestOffer = {
         '07cf6ce2-6eee-4e78-a441-f257fdea7ed6' // Boyfriend T-Shirt with Bohemian print
     ]
 };
+
+export default bestOffer;
