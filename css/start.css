@@ -39,6 +39,10 @@ h2{
   text-align: center;
 }
 
+h4{
+  width:240px;
+}
+
 /* header */
 
 .header__title{
@@ -272,7 +276,7 @@ background-size: contain;
     -ms-grid-row: 1;
     grid-column: 5;
     -ms-grid-column: 5;
-  margin-top: 25vh;
+  margin-top: 15vh;
   }
 
   .offer div{
@@ -287,7 +291,7 @@ background-size: contain;
   }
 
   .arrow-down{
-    margin: 5vh 0 8vh 0;
+    margin: 3vh 0 3vh 0;
   }
 
   .plus,
@@ -298,6 +302,7 @@ font-weight: bold;
 
   .offer__title{
     font-size: 0.9rem;
+    width: 20vw;
   }
 
   .cross{
@@ -350,7 +355,7 @@ margin: 0.5vw;
     margin-top: 10vh;
     display: flex;
     justify-content: space-around;
-    
+    flex-wrap: wrap;
   }
 
   .layout-4-column div{
@@ -457,7 +462,23 @@ margin: 11vh auto;
   padding: 0 1vw;
 }
 
+.new-arrivals>div{
+  position: relative;
+}
 
+.new::after{
+  position: absolute;
+ content:'NEW';
+
+ color:white;
+ display: block;
+ width: 25%;
+ height: 6%;
+ padding-top: 2%;
+ background-color:rgb(247, 151, 159);
+ z-index: 10;
+ top: 5%;
+}
 }
 
 
@@ -476,7 +497,7 @@ margin: 11vh auto;
 
  .text,
  .footer__text p,
- .new-arrivals>div:last-child{
+ .new-arrivals>div:nth-child(4){
    display: none;
  }
 
@@ -546,7 +567,7 @@ margin: 11vh auto;
   grid-column-start: 2;
   grid-column-end: 5;
   margin-bottom: 10vh;
-  
+  margin-top: 0;
 }
 
 .share span{
@@ -635,6 +656,19 @@ margin: 11vh auto;
     padding: 3vh;
   }
 
+  .equal{
+    grid-row: 2 ;
+    grid-column: 2;
+    grid-column-start: 1;
+      grid-column-end: 4;
+    -ms-grid-column: 2;
+      -ms-grid-row: 1;
+      -ms-grid-column-start: 1;
+      -ms-grid-column-end: 4;
+      margin-bottom: 10vh;
+      margin-right: 25vw;
+  }
+
   .total{
     grid-row: 2 ;
     grid-column: 2;
@@ -644,7 +678,7 @@ margin: 11vh auto;
       -ms-grid-row: 1;
       -ms-grid-column-start: 1;
       -ms-grid-column-end: 4;
-      margin-bottom: 20vh;
+      margin-bottom: 10vh;
   }
 
   .btn{
@@ -656,7 +690,7 @@ margin: 11vh auto;
       -ms-grid-row: 1;
           -ms-grid-column-start: 1;
       -ms-grid-column-end: 4;
-   
+   margin-top: 15vh;
   }
 
   .button{

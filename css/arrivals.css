@@ -1,0 +1,48 @@
+.new-arrivals__photo {
+    position: relative;
+    display: block;
+  }
+
+  .new-arrivals__price{
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    }
+
+    .new-arrivals__price>.cross{
+      position: absolute;
+      left:20%;
+      top:55%;
+      width: 4vw;
+    }
+
+    .link__wrapper{
+        width:240px;
+        height: 340px;
+        background-position: center;
+      }
+    
+      .link__wrapper::before {
+        position: absolute;
+        content: 'View item';
+        display: none;
+        z-index: 10;
+        width: 240px;
+        height: 160px;
+        padding-top: 180px;
+        background-color: rgba(76, 76, 76, 0.5);
+        font-size: 2rem;
+        font-weight: bold;
+        color: rgb(243, 102, 113);
+    
+      }
+    
+      .link__wrapper:hover::before {
+        display: block;
+        cursor: pointer;
+      }
+
+      
+    .price_cross{
+        color:grey;
+      }

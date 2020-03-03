@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="css/start.css">
+    <link rel="stylesheet" type="text/css" href="css/item.css">
     <link rel="stylesheet" type="text/css" href="css/catalog.css">
-    <script src="./dist/item.js" type="module"></script>
-    <script src="./dist/header.js"></script>
-    <script src="./data/catalog.js" type="module"></script>
-    <title>Template</title>
+      <script src="./js/header.js"></script>
+     <script src="./js/catalogPage.js"></script>
+     <script src="./js/item.js" ></script>
+     <title>Template</title>
     <link
         href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700|Roboto:300,300i,400,400i,700,700i&display=swap&subset=cyrillic"
         rel="stylesheet">
@@ -49,7 +50,29 @@
             </nav>
         </header>
         <main>
-            
+            <div class="back">&#60; Back to catalog</div>
+            <div class="item__wrapper">
+                
+                
+                <div class="item__img">
+                    <div class="item__img_big"></div>
+                    <div class="item__img_small">
+                     
+                    </div>
+                </div>
+                <div class="item__text">
+                    <h3 class="item__header"></h3>
+                    <p class="item__description"></p>
+                    <div class="item__price"></div>
+                    <div class="item__sizes">
+                        <p>Size:</p>
+                    </div>
+                    <div class="item__color">
+                        <p>Colors:</p>
+                    </div>
+                    <button class="button">Add Bag</button>
+                </div>
+            </div>
         </main>
         <div class="banner__border">
             <div class="banner layout-3-column">
@@ -63,7 +86,7 @@
                 <div class = "banner__center" >
                     <div class="banner__title">
                         <h3>Repair Patches</h3>
-                    <p>£ 150.50</p>
+                    <p>&#163; 150.50</p>
                     </div>
                     <div class="banner__img"></div>
                 </div>
