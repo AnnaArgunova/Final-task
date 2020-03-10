@@ -12,7 +12,7 @@
     <script src="./js/arrivals.js"></script>
     <title>Template</title>
     <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700|Roboto:300,300i,400,400i,700,700i&display=swap&subset=cyrillic"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700 oboto:300,300i,400,400i,700,700i&display=swap&subset=cyrillic"
         rel="stylesheet">
 </head>
 
@@ -20,12 +20,12 @@
     <div class="wrapper">
         <header>
             <div class="header__title">
-                <h1 href="#">Template</h1>
+                <h1>Template</h1>
                 <a class="header__sing-up" href="#">E-mail sing up</a>
                 <a class="header__bag" href="#"><img src="./img/ico-bag.jpg" alt="bag">Bag<span>(0)</span></a>
                 <div class="menu__icons">
-                    <div class="menu__icon"> &#9776</div>
-                    <div class="close">&#9587</div>
+                    <div class="menu__icon"> &#9776;</div>
+                    <div class="close">&#9587;</div>
                 </div>
             </div>
             <nav>
@@ -51,7 +51,7 @@
             </nav>
         </header>
         <main>
-            <section class="filter">
+            <div class="filter">
                 <ul class="menu__top">
                     <li>
                         <div class="item">
@@ -71,10 +71,11 @@
                         </div>
                     </li>
                     <li>
-                        <div class="item"> <div class="item__title">
-                            <div>Product type </div>
-                            <span class="btn__title">&#9660;</span>
-                        </div>
+                        <div class="item">
+                            <div class="item__title">
+                                <div>Product type </div>
+                                <span class="btn__title">&#9660;</span>
+                            </div>
                             <div class="item__select">
                                 <div>Not selected</div>
                                 <div>Coat & jackets</div>
@@ -84,10 +85,11 @@
                         </div>
                     </li>
                     <li>
-                        <div class="item"> <div class="item__title">
-                            <div>Colors </div>
-                            <span class="btn__title">&#9660;</span>
-                        </div>
+                        <div class="item">
+                            <div class="item__title">
+                                <div>Colors </div>
+                                <span class="btn__title">&#9660;</span>
+                            </div>
                             <div class="item__select">
                                 <div>Not selected</div>
                                 <div>Black</div>
@@ -100,25 +102,27 @@
                     </li>
 
                     <li>
-                        <div class="item"> <div class="item__title">
-                            <div>Brand</div>
-                            <span class="btn__title">&#9660;</span>
-                        </div>
+                        <div class="item">
+                            <div class="item__title">
+                                <div>Brand</div>
+                                <span class="btn__title">&#9660;</span>
+                            </div>
                             <div class="item__select">
-                                <div value="Not selected">Not selected</div>
-                                <div value="Chi Chi London">Chi Chi London</div>
-                                <div value="Antipodium">Antipodium</div>
-                                <div value="Adidas">Adidas</div>
-                                <div value="New Balance">New Balance</div>
-                                <div value="River Island">River Island</div>
+                                <div>Not selected</div>
+                                <div>Chi Chi London</div>
+                                <div>Antipodium</div>
+                                <div>Adidas</div>
+                                <div>New Balance</div>
+                                <div>River Island</div>
                             </div>
                         </div>
                     </li>
                     <li>
-                        <div class="item"> <div class="item__title">
-                            <div>Sizes</div>
-                            <span class="btn__title">&#9660;</span>
-                        </div>
+                        <div class="item">
+                            <div class="item__title">
+                                <div>Sizes</div>
+                                <span class="btn__title">&#9660;</span>
+                            </div>
                             <div class="item__select">
                                 <div>Not selected</div>
                                 <div>UK 2</div>
@@ -133,23 +137,24 @@
                         </div>
                     </li>
                     <li>
-                        <div class="item"> <div class="item__title">
-                            <div>Price range</div>
-                            <span class="btn__title">&#9660;</span>
-                        </div>
+                        <div class="item">
+                            <div class="item__title">
+                                <div>Price range</div>
+                                <span class="btn__title">&#9660;</span>
+                            </div>
                             <div class="item__select">
                                 <div>Not selected</div>
                                 <div>To &#163;99</div>
                                 <div>&#163;100 - &#163;299</div>
-                                <div>from £300</option>
-                                </div>
+                                <div>from £300</div>
                             </div>
+                        </div>
                     </li>
                 </ul>
-            </section>
-            <section class="new-arrivals layout-4-column">
+            </div>
+            <div class="new-arrivals layout-4-column">
 
-            </section>
+            </div>
             <section class="catalog__text">
                 <h3>Last weekend <span class="text_color">extra 50% </span>soff on all reduced boots and shoulder bags
                 </h3>
@@ -157,71 +162,67 @@
                     offer ends at 11:59 GMT on March 1st 2019</p>
             </section>
             <section class="catalog layout-4-column">
-
-                
+                <div>
+                    <div class="link__wrapper"></div>
+                    <h4 class="new-arrivals__title"></h4>
+                    <p class="new-arrivals__price"></p>
+                </div>
+                <div class="catalog__items">
                     <div>
                         <div class="link__wrapper"></div>
                         <h4 class="new-arrivals__title"></h4>
                         <p class="new-arrivals__price"></p>
                     </div>
-                    
-
-                    <div class="catalog__items">
-                        <div>
-                            <div class="link__wrapper"></div>
-                            <h4 class="new-arrivals__title"></h4>
-                            <p class="new-arrivals__price"></p>
-                        </div>
+                </div>
+                <div class="catalog__items">
+                    <div>
+                        <div class="link__wrapper"></div>
+                        <h4 class="new-arrivals__title"></h4>
+                        <p class="new-arrivals__price"></p>
                     </div>
-                    <div class="catalog__items">
-                        <div>
-                            <div class="link__wrapper"></div>
-                            <h4 class="new-arrivals__title"></h4>
-                            <p class="new-arrivals__price"></p>
-                        </div>
+                </div>
+                <div class="catalog__items">
+                    <div>
+                        <div class="link__wrapper"></div>
+                        <h4 class="new-arrivals__title"></h4>
+                        <p class="new-arrivals__price"></p>
                     </div>
-                    <div class="catalog__items">
-                        <div>
-                            <div class="link__wrapper"></div>
-                            <h4 class="new-arrivals__title"></h4>
-                            <p class="new-arrivals__price"></p>
-                        </div>
+                </div>
+                <div class="catalog__items">
+                    <div>
+                        <div class="link__wrapper"></div>
+                        <h4 class="new-arrivals__title"></h4>
+                        <p class="new-arrivals__price"></p>
                     </div>
-                    <div class="catalog__items">
-                        <div>
-                            <div class="link__wrapper"></div>
-                            <h4 class="new-arrivals__title"></h4>
-                            <p class="new-arrivals__price"></p>
-                        </div>
+                </div>
+                <div class="catalog__items">
+                    <div>
+                        <div class="link__wrapper"></div>
+                        <h4 class="new-arrivals__title"></h4>
+                        <p class="new-arrivals__price"></p>
                     </div>
-                    <div class="catalog__items">
-                        <div>
-                            <div class="link__wrapper"></div>
-                            <h4 class="new-arrivals__title"></h4>
-                            <p class="new-arrivals__price"></p>
-                        </div>
+                </div>
+                <div class="catalog__items">
+                    <div>
+                        <div class="link__wrapper"></div>
+                        <h4 class="new-arrivals__title"></h4>
+                        <p class="new-arrivals__price"></p>
                     </div>
-                    <div class="catalog__items">
-                        <div>
-                            <div class="link__wrapper"></div>
-                            <h4 class="new-arrivals__title"></h4>
-                            <p class="new-arrivals__price"></p>
-                        </div>
+                </div>
+                <div class="catalog__items">
+                    <div>
+                        <div class="link__wrapper"></div>
+                        <h4 class="new-arrivals__title"></h4>
+                        <p class="new-arrivals__price"></p>
                     </div>
-                    <div class="catalog__items">
-                        <div>
-                            <div class="link__wrapper"></div>
-                            <h4 class="new-arrivals__title"></h4>
-                            <p class="new-arrivals__price"></p>
-                        </div>
+                </div>
+                <div class="catalog__items">
+                    <div>
+                        <div class="link__wrapper"></div>
+                        <h4 class="new-arrivals__title"></h4>
+                        <p class="new-arrivals__price"></p>
                     </div>
-                    <div class="catalog__items">
-                        <div>
-                            <div class="link__wrapper"></div>
-                            <h4 class="new-arrivals__title"></h4>
-                            <p class="new-arrivals__price"></p>
-                        </div>
-                    </div>
+                </div>
             </section>
             <div class="new-arrivals__button">
                 <a class="button" href="#">Show more</a>
@@ -301,7 +302,7 @@
                 </div>
             </div>
             <div class="footer__share">
-                <div>&#169 2010-2015, The Template Group inc.</div>
+                <div>&#169; 2010-2015, The Template Group inc.</div>
                 <div class="share">Share <span>1 437</span> </div>
                 <div class="share__nav">
                     <a href="#"> Legal notice</a>
