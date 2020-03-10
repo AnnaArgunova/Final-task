@@ -80,6 +80,10 @@
     cursor: pointer;
   }
 
+  .header__bag span{
+    margin-left: 0.5vw;
+  }
+
   .header__bag img {
     margin: 0 0.7vw;
   }

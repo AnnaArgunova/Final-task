@@ -196,7 +196,7 @@ window.addEventListener("load", function () {
         thumbnail: './img/photo13.png', // replace with image extracted from item layout
         preview: ['full image path 1', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
     }];
-    
+
     window.bestOffer = {
         discount: 15,
         left: [
@@ -209,12 +209,12 @@ window.addEventListener("load", function () {
             '07cf6ce2-6eee-4e78-a441-f257fdea7ed6' // Boyfriend T-Shirt with Bohemian print
         ]
     };
-    
+
     //best offer
- 
+
     const total = document.querySelector('.offer__total');
     const discount = document.querySelector('.offer__discount'),
-    button = document.querySelector('.button');
+        button = document.querySelector('.button');
     let itemContent = 0;
     let rightItem = 0;
     let leftItem = 0;
@@ -222,7 +222,7 @@ window.addEventListener("load", function () {
     const arrowUp = document.querySelectorAll(`.arrow-up`);
     const arrowDown = document.querySelectorAll(`.arrow-down`);
 
-   function renderBestOffer(parent, content) {
+    function renderBestOffer(parent, content) {
 
         const imgBestOffer = document.querySelector(`.${parent}>.offer__photo`);
         const title = document.querySelector(`.${parent}>.offer__title`);
@@ -238,11 +238,11 @@ window.addEventListener("load", function () {
 
     }
 
-        renderBestOffer('left', bestOffer.left[itemContent]);
-        renderBestOffer('right', bestOffer.right[itemContent]);
-    
+    renderBestOffer('left', bestOffer.left[itemContent]);
+    renderBestOffer('right', bestOffer.right[itemContent]);
 
-    
+
+
 
     function renderTotal(leftItem, rightItem) {
         let idLeft = bestOffer.left[leftItem];
@@ -313,9 +313,9 @@ window.addEventListener("load", function () {
     })
 
 
-    button.addEventListener('click', function(){
+    button.addEventListener('click', function () {
         location.href = './shopping.html';
     })
 
-    
+
 })

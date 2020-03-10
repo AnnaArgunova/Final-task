@@ -21,7 +21,7 @@
         display: none;
         z-index: 10;
         width: 16vw;
-        height: 17vw;
+        height: 13vw;
         padding-top: 15vh;
         background-color: rgba(76, 76, 76, 0.5);
         font-size: 1.5rem;
@@ -130,13 +130,17 @@
 @media screen and (max-width:1024px) {
     .items {
         justify-content: space-around;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
     }
 
     .link__wrapper {
         width: 16vw;
         height: 28vw;
 
+    }
+
+    .link__wrapper:hover::before {
+        display: none;
     }
 
     .new::after {

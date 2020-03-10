@@ -199,7 +199,7 @@ window.addEventListener("load", function () {
     }];
 
 
-    
+
     //Filter
 
     const catalogAll = window.catalog;
@@ -212,17 +212,17 @@ window.addEventListener("load", function () {
         btn = document.querySelectorAll('.item');
     let isOpen = false;
     let seleted = document.createElement('div');
-        seleted.className = 'selected';
+    seleted.className = 'selected';
 
     document.querySelectorAll('.item__select').forEach(element => {
         element.style.display = 'none';
     });
 
-    
-    function filter(catalog){
+
+    function filter(catalog) {
         for (let i = 0; i < catalogItem.length; i++) {
             title[i].innerHTML = catalog[i].title;
-                       
+
             if (catalog[i].price > catalog[i].discountedPrice && catalog[i].discountedPrice != null) {
                 const cross = document.createElement('div');
                 cross.className = 'cross';
@@ -235,35 +235,35 @@ window.addEventListener("load", function () {
                 const priceDiscaunt = document.createElement('div');
                 priceDiscaunt.innerHTML = catalog[i].discountedPrice + '&#163;';
                 price[i].appendChild(priceDiscaunt);
-    
+
             } else {
                 price[i].innerHTML = catalog[i].price + '&#163;';
             }
-    
+
             if (catalog[i].hasNew) {
                 link[i].classList.add('new');
                 link[i].style.backgroundImage = `url(${catalog[i].thumbnail})`;
             } else {
                 link[i].style.backgroundImage = `url(${catalog[i].thumbnail})`;
             }
-    
+
             link[i].addEventListener('click', function () {
                 location.href = './item.html';
-    
+
                 let id = {
                     id: catalog[i]
                 };
-                  sessionStorage.setItem(catalog[i].title, JSON.stringify(id));
-                })
+                sessionStorage.setItem(catalog[i].title, JSON.stringify(id));
+            })
         }
-            }
-   filter(catalogAll);
+    }
+    filter(catalogAll);
 
     for (let i = 0; i < btn.length; i++) {
-       
+
         btn[i].addEventListener('click', function (event) {
             let option = event.currentTarget.lastChild.previousElementSibling;
-          
+
             if (isOpen) {
                 option.style.display = 'none';
                 isOpen = false;
@@ -271,46 +271,46 @@ window.addEventListener("load", function () {
             } else {
                 option.style.display = 'block';
                 isOpen = true;
-             
+
             }
 
 
         })
     }
 
-   
-    for(let i =0; i< item.length; i++){
+
+    for (let i = 0; i < item.length; i++) {
         let catalogFilter = [];
-            item[i].addEventListener('click', function(event){
-                seleted.innerHTML = event.target.textContent;
-               
-               let items = item[i].parentNode.parentNode.firstChild.nextSibling.firstChild.nextSibling.innerText;
-               items = items.toLowerCase()
-               catalog.forEach(element => {
-                 
-                   if(event.target.textContent == element[items]){
-                       catalogFilter.push(element);
-                                         
-                   }
-                             
-               });
-               
-             if(catalogFilter.length < 8){
-                 for(let i = catalogFilter.length; i < 8; i++){
-              catalogFilter.push(catalogAll[i]);
-                 }      
-             }
-           
-                event.path[2].appendChild(seleted);
-                if(seleted.textContent == 'Not selected'){
-                    seleted.innerHTML ='';
+        item[i].addEventListener('click', function (event) {
+            seleted.innerHTML = event.target.textContent;
+
+            let items = item[i].parentNode.parentNode.firstChild.nextSibling.firstChild.nextSibling.innerText;
+            items = items.toLowerCase()
+            catalog.forEach(element => {
+
+                if (event.target.textContent == element[items]) {
+                    catalogFilter.push(element);
+
                 }
-               
-                filter(catalogFilter);
-            })
-            
-          
-        }
-   
+
+            });
+
+            if (catalogFilter.length < 8) {
+                for (let i = catalogFilter.length; i < 8; i++) {
+                    catalogFilter.push(catalogAll[i]);
+                }
+            }
+
+            event.path[2].appendChild(seleted);
+            if (seleted.textContent == 'Not selected') {
+                seleted.innerHTML = '';
+            }
+
+            filter(catalogFilter);
+        })
+
+
+    }
+
 
 })
