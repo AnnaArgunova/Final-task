@@ -316,4 +316,6 @@ window.addEventListener("load", function () {
     button.addEventListener('click', function(){
         location.href = './shopping.html';
     })
+
+    
 })

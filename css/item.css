@@ -46,13 +46,15 @@ background-size: 100%;
        align-items:center;
   }
 
-  .item__button{
+  .item__button_size,
+  .item__button_color{
       margin-left: 2vw;
       background-color: transparent;
       border: none;
       font-weight: bold;
       padding: 2%;
   }
+
 
   .item__text .button{
 margin: 10vh 0 0 10vw;
