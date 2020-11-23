@@ -1,4 +1,3 @@
-
 window.addEventListener("load", function () {
 
     window.catalog = [{
@@ -200,55 +199,118 @@ window.addEventListener("load", function () {
     }];
 
 
-const catalog = window.catalog;
-const catalogItem = document.querySelectorAll('.catalog__items'),
-link = document.querySelectorAll('.link__wrapper'),
-title = document.querySelectorAll('.catalog .new-arrivals__title'),
-price = document.querySelectorAll('.catalog .new-arrivals__price');
+    
+    //Filter
 
-for(let i = 0; i <catalogItem.length;i++){
-     title[i].innerHTML = catalog[i].title;
-     if(catalog[i].price > catalog[i].discountedPrice && catalog[i].discountedPrice != null){
-        const cross = document.createElement('div');
-        cross.className = 'cross';
-        price[i].appendChild(cross);
-        const priceTotal = document.createElement('div');
-        priceTotal.className = 'new-arrivals__price';
-        priceTotal.innerHTML = catalog[i].price + '&#163;';
-        priceTotal.className = 'price_cross';
-        price[i].appendChild(priceTotal);
-        const priceDiscaunt = document.createElement('div');
-        priceDiscaunt.innerHTML = catalog[i].discountedPrice + '&#163;';
-        price[i].appendChild(priceDiscaunt);
+    const catalogAll = window.catalog;
+    const catalogItem = document.querySelectorAll('.catalog__items'),
+        link = document.querySelectorAll('.link__wrapper'),
+        title = document.querySelectorAll('.catalog .new-arrivals__title'),
+        price = document.querySelectorAll('.catalog .new-arrivals__price');
+
+    const item = document.querySelectorAll('.item__select div'),
+        btn = document.querySelectorAll('.item');
+    let isOpen = false;
+    let seleted = document.createElement('div');
+        seleted.className = 'selected';
+
+    document.querySelectorAll('.item__select').forEach(element => {
+        element.style.display = 'none';
+    });
+
+    
+    function filter(catalog){
+        for (let i = 0; i < catalogItem.length; i++) {
+            title[i].innerHTML = catalog[i].title;
+                       
+            if (catalog[i].price > catalog[i].discountedPrice && catalog[i].discountedPrice != null) {
+                const cross = document.createElement('div');
+                cross.className = 'cross';
+                price[i].appendChild(cross);
+                const priceTotal = document.createElement('div');
+                priceTotal.className = 'new-arrivals__price';
+                priceTotal.innerHTML = catalog[i].price + '&#163;';
+                priceTotal.className = 'price_cross';
+                price[i].appendChild(priceTotal);
+                const priceDiscaunt = document.createElement('div');
+                priceDiscaunt.innerHTML = catalog[i].discountedPrice + '&#163;';
+                price[i].appendChild(priceDiscaunt);
+    
+            } else {
+                price[i].innerHTML = catalog[i].price + '&#163;';
+            }
+    
+            if (catalog[i].hasNew) {
+                link[i].classList.add('new');
+                link[i].style.backgroundImage = `url(${catalog[i].thumbnail})`;
+            } else {
+                link[i].style.backgroundImage = `url(${catalog[i].thumbnail})`;
+            }
+    
+            link[i].addEventListener('click', function () {
+                location.href = './item.html';
+    
+                let id = {
+                    id: catalog[i]
+                };
+                  sessionStorage.setItem(catalog[i].title, JSON.stringify(id));
+                })
+        }
+            }
+   filter(catalogAll);
+
+    for (let i = 0; i < btn.length; i++) {
        
+        btn[i].addEventListener('click', function (event) {
+            let option = event.currentTarget.lastChild.previousElementSibling;
+          
+            if (isOpen) {
+                option.style.display = 'none';
+                isOpen = false;
 
-         
-     } else{
-        price[i].innerHTML = catalog[i].price +'&#163;';
-     }
-     
-     if(catalog[i].hasNew){
-         link[i].classList.add('new');
-         link[i].style.backgroundImage = `url(${catalog[i].thumbnail})`;
-     } else{
-        link[i].style.backgroundImage = `url(${catalog[i].thumbnail})`;
-     }
-    
-link[i].addEventListener('click', function(){
-    location.href = './item.html';
-        
-    let id = {
-       id: catalog[i]
-    };
-    
-    localStorage.setItem(catalog[i].title,JSON.stringify(id));
+            } else {
+                option.style.display = 'block';
+                isOpen = true;
+             
+            }
+
+
+        })
+    }
+
    
-    
+    for(let i =0; i< item.length; i++){
+        let catalogFilter = [];
+            item[i].addEventListener('click', function(event){
+                seleted.innerHTML = event.target.textContent;
+               
+               let items = item[i].parentNode.parentNode.firstChild.nextSibling.firstChild.nextSibling.innerText;
+               items = items.toLowerCase()
+               catalog.forEach(element => {
+                 
+                   if(event.target.textContent == element[items]){
+                       catalogFilter.push(element);
+                                         
+                   }
+                             
+               });
+               
+             if(catalogFilter.length < 8){
+                 for(let i = catalogFilter.length; i < 8; i++){
+              catalogFilter.push(catalogAll[i]);
+                 }      
+             }
+           
+                event.path[2].appendChild(seleted);
+                if(seleted.textContent == 'Not selected'){
+                    seleted.innerHTML ='';
+                }
+               
+                filter(catalogFilter);
+            })
+            
+          
+        }
+   
 
-})
-}
-
-
-
- 
 })

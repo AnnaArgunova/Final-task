@@ -34,6 +34,10 @@ h1, h2, h3{
   margin: 0%;
 }
 
+h1{
+  cursor: pointer;
+}
+
 h2{
   font-size: 3.2rem;
   text-align: center;
@@ -68,6 +72,7 @@ h4{
 
 .header__bag{
    margin-left: 1.7vw;
+   cursor: pointer;
 }
 
 .header__bag img{
