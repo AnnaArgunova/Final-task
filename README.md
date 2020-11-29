@@ -1,1 +1,1 @@
-https://AnnaArgunova.github.io/Final-task/index
+AnnaArgunova.github.io/Final-task
